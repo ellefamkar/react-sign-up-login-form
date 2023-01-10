@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-
 import styled from "styled-components";
-import "../index.css";
 import { validation } from "./validation";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -153,6 +151,61 @@ const FormContainer = styled.div`
       align-items: center;
    }
 
+   select {
+      padding: 10px;
+      margin-bottom: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      font:inherit;
+      color:#ffffff;
+      background-color: transparent;
+      outline: 2px solid #ffffff;
+    }
+
+    select option{
+      color:#000000;
+    }
+
+   .relativeContainer{
+      position: relative;
+   }
+
+   .errors{
+      margin-top: -8px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      font-size: 12px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      color: #ff0000;
+      background-color: #fffffff2;
+      right: 6%;
+   }
+   
+   .checkBoxErrors{
+      margin-bottom: 5px;
+      margin-top: 4px;
+      font-size: 12px;
+      display: inline-block;
+      color: #ff0000;
+      background-color: #fffffff2;
+      padding: 4px 10px;
+      border-radius: 3px;
+   
+   }
+
+   @keyframes errorAnimation {
+      0% {
+         background-position: -500%;
+      }
+      100% {
+         background-position: 500%;
+      }
+   }
+ 
    @keyframes animate {
       0% {
          background-position: -500%;
@@ -186,9 +239,52 @@ const InputContainer = styled.div`
    label {
       z-index: -1;
    }
+
+   input:-internal-autofill-selected {
+      background-color: #ffffff !important;
+   }
+
    .inputClass {
       z-index: 2;
+
+      &[type="checkbox"]{
+         padding: 10px;
+         margin-left:5px;
+         margin-top:5px;
+         border: none;
+         border-radius: 4px;
+         font:inherit;
+         color:#ffffff;
+         background-color: transparent;
+         outline: none;
+       }
+
+      &:not([type="checkbox"]){
+         padding: 10px;
+         margin-bottom: 12px;
+         width: 100%;
+         border: none;
+         border-radius: 4px;
+         font:inherit;
+         color:#ffffff;
+         background-color: transparent;
+         outline: 2px solid #ffffff;
+       }
+
+       &:not([type="checkbox"]) option{
+         color:#000000;
+       }
    }
+
+   .labelClass {
+      position: absolute;
+      top:0;
+      left:0;
+      transform: translate(10px,10px);
+      transform-origin: left;
+      transition: transform .25s;
+    }
+
    &:focus-within {
       margin-top: 2rem;
    }
