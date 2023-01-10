@@ -112,8 +112,9 @@ const FormContainer = styled.div`
 
    form {
       width: 100%;
+
       .buttonContainer{
-        width:50%;
+        width:55%;
         margin:1rem auto 0.2rem auto;
         display: flex;
         flex-direction:row;
@@ -124,7 +125,7 @@ const FormContainer = styled.div`
       button,
       a {
          cursor: pointer;
-         padding: 0.5rem 1rem;
+         padding: 0.5rem 1.5rem;
          border-radius: 5px;
          border: none;
          margin-top:1rem;
@@ -150,6 +151,22 @@ const FormContainer = styled.div`
       100% {
          background-position: 500%;
       }
+   }
+
+   @media (max-width: 768px){
+      max-width: 90%;
+      margin: 0 auto;
+      height: auto;
+
+      form {
+         .buttonContainer {
+            width: 100%;
+         }
+         button {
+            width: 48%;
+         }
+      }
+      
    }
 `;
 
