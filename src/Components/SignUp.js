@@ -151,6 +151,20 @@ const FormContainer = styled.div`
       align-items: center;
    }
 
+   
+   input[type="checkbox"]{
+      padding: 10px;
+      margin-left: 0.7rem;
+      margin-top:5px;
+      border: none;
+      border-radius: 4px;
+      font:inherit;
+      color:#ffffff;
+      background-color: transparent;
+      outline: none;
+      accent-color: #f09;
+    }
+
    select {
       padding: 10px;
       margin-bottom: 12px;
@@ -249,7 +263,7 @@ const InputContainer = styled.div`
 
       &[type="checkbox"]{
          padding: 10px;
-         margin-left:5px;
+         margin-left:1rem;
          margin-top:5px;
          border: none;
          border-radius: 4px;
