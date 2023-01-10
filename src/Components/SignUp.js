@@ -70,6 +70,13 @@ const Container = styled.div`
       transform: translate3d(0,-3px,0) rotateZ(0.01deg);
     }
   }
+
+  @media (max-width: 768px){
+      &::after {
+      display: none; 
+      }
+   }
+
 }
 `;
 
@@ -91,9 +98,11 @@ const FormContainer = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
+
    h2 {
       color: #ffffff;
    }
+
    p {
       position: relative;
       font-family: sans-serif;
