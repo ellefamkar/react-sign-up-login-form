@@ -1,4 +1,4 @@
-# Welcome to my React Sign Up Form Application 👋
+# Welcome to my React Sign Up | Login Form Application 👋
 
 ## Available Scripts
 
@@ -26,11 +26,12 @@ Remember that "Every day is a learning day" and try to learn from everyone!
 
  ### Screenshot 
 
-![](./public/images/Screenshot.png)
+![](./public/images/Sign-up-Screenshot.png)
+![](./public/images/Login-Screenshot.png)
 
 ### Links
 
-- Live Site URL: [React Sign Up Form Application](https://melodic-cactus-7d3a19.netlify.app/)
+- Live Site URL: [React Sign Up | Login Form Application](https://melodic-cactus-7d3a19.netlify.app/)
 
 ## My process
 
@@ -42,17 +43,19 @@ The first think to do is to look for your perfect design! So let's checkout [dri
 
 - Reactjs
 - React Toastify
+- Building custom hooks
 - Styled Components
 - CSS
 - Flexbox
 - CSS Grid
 - Desktop-first workflow
+- CSS Animations
 
 You can use any tools you like to help you complete the project. So if you got something you'd like to practice, feel free to give it a try. However, i made it responsive for all the devices, since my users should be able to: View the optimal layout depending on their device's screen size
 
 ### What I learned
 
-This projects helped me being more familiar with the details of react, how to validate the form and handle errors together with giving styles with Styled components, toastify and use my css knowledge as well to create a responsive project with small details on colors,sizes and so on.
+This projects helped me being more familiar with the details of react, how to validate sign up and login forms and handle errors together with giving styles with Styled components, toastify and use my css knowledge as well to create a responsive project with small details on colors,sizes and so on.
 
 To see parts of my codes and see how you can add code snippets, see below:
 
@@ -118,6 +121,7 @@ const FormContainer = styled.div`
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
+   
    h2 {
       color: #ffffff;
    }

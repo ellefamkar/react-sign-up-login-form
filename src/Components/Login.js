@@ -430,17 +430,17 @@ const Login = () => {
    };
 
    const handleChange = (event)=>{
-         setData({
+        setData({
             ...data,
             [event.target.name]: event.target.value
-         });
-         if (event.target.value) {
-               event.target.style.background = "#ffffff";
-               event.target.style.color = "#000000";
-            } else {
-               event.target.style.background = "transparent";
-               event.target.style.color = "transparent";
-            }
+        });
+        if (event.target.value) {
+            event.target.style.background = "#ffffff";
+            event.target.style.color = "#000000";
+        } else {
+            event.target.style.background = "transparent";
+            event.target.style.color = "transparent";
+        }
    };
 
    return (
