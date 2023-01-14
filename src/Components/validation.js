@@ -1,14 +1,6 @@
-export const validation = (data) => {
+export const validation = (data, type) => {
 
     const errors = {};
-
-    if(!data.name.trim()){
-        errors.name = "Please enter you name"
-    }else if(data.name.length < 3){
-        errors.name = "Your name should be more than three words"
-    }else{
-        delete errors.name
-    }
 
     if(!data.email){
         errors.email = "You must enter an email address"
@@ -27,24 +19,36 @@ export const validation = (data) => {
         delete errors.password
     }
 
-    if(!data.confirmPassword){
-        errors.confirmPassword = "Please confirm your password!"
-    } else if(data.confirmPassword !== data.password){
-        errors.confirmPassword = "Passowords do not match"
-    }else{
-        delete errors.confirmPassword
-    }
 
-    if(!data.select){
-        errors.select = "Choose a field"
-    }else{
-        delete errors.select
-    }
+    if(type === "signup"){
+        
+        if(!data.name.trim()){
+            errors.name = "Please enter you name"
+        }else if(data.name.length < 3){
+            errors.name = "Your name should be more than three words"
+        }else{
+            delete errors.name
+        }
 
-    if(data.isAccepted){
-        delete errors.isAccepted
-    }else{
-        errors.isAccepted = "Please confirm our regulations!"
+        if(!data.confirmPassword){
+            errors.confirmPassword = "Please confirm your password!"
+        } else if(data.confirmPassword !== data.password){
+            errors.confirmPassword = "Passowords do not match"
+        }else{
+            delete errors.confirmPassword
+        }
+    
+        if(!data.select){
+            errors.select = "Choose a field"
+        }else{
+            delete errors.select
+        }
+    
+        if(data.isAccepted){
+            delete errors.isAccepted
+        }else{
+            errors.isAccepted = "Please confirm our regulations!"
+        }
     }
 
     return errors;
