@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toast";
 // import { Link } from "react-router-dom/cjs/react-router-dom"; for v5
 import { Link } from "react-router-dom";
+import useTitle from "../Hooks/useTitle";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -402,9 +403,10 @@ const Login = () => {
    const [errors, setErrors] = useState({});
    const [touched, setTouched] = useState({});
 
+   useTitle("Login Form");
+
    useEffect(()=>{
       setErrors(validation(data, "login"));
-      document.title = "Login";
    }, [data, touched]);
 
    const handleTouch = (event)=>{

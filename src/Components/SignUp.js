@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toast";
 // import { Link } from "react-router-dom/cjs/react-router-dom";
 import { Link } from "react-router-dom";
+import useTitle from "../Hooks/useTitle";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -404,6 +405,8 @@ const SignUp = () => {
 
    const [errors, setErrors] = useState({});
    const [touched, setTouched] = useState({});
+
+   useTitle("Sign Up Form");
 
    useEffect(()=>{
       setErrors(validation(data, "signup"));
