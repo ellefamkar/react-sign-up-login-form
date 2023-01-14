@@ -4,6 +4,7 @@ import { validation } from "./validation";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toast";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const Container = styled.div`
   min-height: calc(100vh - 2rem);
@@ -371,7 +372,7 @@ const LoginButton = styled.div`
    border-bottom-left-radius: 5px;
    }
 
-   span {
+   span{
       position: absolute;
       top: 1px;
       bottom: 0px;
@@ -381,6 +382,11 @@ const LoginButton = styled.div`
       border-top-right-radius: 23px;
       border-bottom-right-radius: 14px;
       background: #ffffff61;
+   }
+
+   a{
+      color:white;
+      text-decoration: none;
    }
 `;
 
@@ -493,7 +499,7 @@ const SignUp = () => {
                </div>
             </form>
             <LoginButton>
-               Login
+               <Link to="/login">Login</Link>
                <span></span>
             </LoginButton>
          </FormContainer>

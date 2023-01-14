@@ -4,6 +4,7 @@ import { validation } from "./validation";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toast";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const Container = styled.div`
   min-height: calc(100vh - 2rem);
@@ -383,6 +384,11 @@ const SignUpButton = styled.div`
       border-bottom-right-radius: 14px;
       background: #ffffff61;
    }
+
+   a{
+    color:white;
+    text-decoration: none;
+ }
 `;
 
 const Login = () => {
@@ -397,6 +403,7 @@ const Login = () => {
 
    useEffect(()=>{
       setErrors(validation(data, "login"));
+      document.title = "Login";
    }, [data, touched]);
 
    const handleTouch = (event)=>{
@@ -455,7 +462,7 @@ const Login = () => {
                </div>
         </form>
          <SignUpButton>
-            Sign Up
+            <Link to="/signup">Sign Up</Link>
             <span></span>
         </SignUpButton>
       </FormContainer>
