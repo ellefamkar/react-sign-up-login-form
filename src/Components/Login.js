@@ -39,7 +39,7 @@ const InputContainer = styled.div`
 
       &:not([type="checkbox"]){
          padding: 10px;
-         margin-bottom: 12px;
+         margin-bottom: 1.4rem;
          width: 100%;
          border: none;
          border-radius: 4px;
@@ -80,8 +80,7 @@ const InputContainer = styled.div`
    
 `;
 
-
-const SignUp = () => {
+const Login = () => {
 
    const [data, setData] = useState({
       name: "",
@@ -147,12 +146,7 @@ const SignUp = () => {
 
    return (
       <>
-         <form onSubmit={handleSubmit}>
-               <InputContainer>
-                  <label className="labelClass">First Name</label>
-                  <input type="text" name="name" value={data.name} className={(errors.name && errors.touched) ? "hasError" : "inputClass"} onChange={handleChange} onFocus={handleTouch} />
-                  {errors.name && touched.name &&  <span className="errors">{errors.name}</span>}
-               </InputContainer>
+        <form onSubmit={handleSubmit}>
                <InputContainer>
                   <label className="labelClass">Email Address</label>
                   <input type="text" name="email" value={data.email} className="inputClass" onChange={handleChange} onFocus={handleTouch}  />
@@ -163,33 +157,15 @@ const SignUp = () => {
                   <input type="password" name="password" value={data.password} className="inputClass" onChange={handleChange} onFocus={handleTouch}  />
                   {errors.password && touched.password && <span className="errors">{errors.password}</span>}
                </InputContainer>
-               <InputContainer>
-                  <label className="labelClass">Confirm Password</label>
-                  <input type="password" name="confirmPassword" value={data.confirmPassword} className="inputClass" onChange={handleChange}  onFocus={handleTouch}  />
-                  {errors.confirmPassword && touched.confirmPassword && <span className="errors">{errors.confirmPassword}</span>}
-               </InputContainer>
-               <div className="relativeContainer">
-               <select name="select" value={data.select} onChange={handleChange} onFocus={handleTouch} className="inputClass">
-                     <option value="Work Meeting">Work Meeting</option>
-                     <option value="Consultation">Consultation</option>
-                     <option value="Marketing">Marketing</option>
-               </select>
-               {errors.select && touched.select && <span className="errors">{errors.select}</span>}
-               </div>
-               <div className="relativeContainer">
-                  <label>I accept terms of privacy</label>
-                  <input type="checkbox" name="isAccepted" value={data.isAccepted} className="inputClass" onChange={handleChange} onFocus={handleTouch} />
-                  {errors.isAccepted && touched.isAccepted && <span className="checkBoxErrors">{errors.isAccepted}</span>}
-               </div>
                <div className="buttonContainer">
-                  <button type="submit" className="signup">
-                     Sign Up
+                  <button type="submit" className="Login">
+                     Log In
                   </button>
                </div>
-         </form>
+        </form>
          <ToastContainer />
       </>
    );
 };
 
-export default SignUp;
+export default Login;

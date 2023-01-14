@@ -1,9 +1,9 @@
 import React from "react";
-import SignUp from "./Components/SignUp";
+import Forms from "./Components/Forms";
 
-function App() {
+const App = () => {
    return (
-      <SignUp />
+    <Forms />
    );
 }
 

@@ -3,7 +3,7 @@ export const validation = (data) => {
     const errors = {};
 
     if(!data.name.trim()){
-        errors.name = "You must enter a name"
+        errors.name = "Please enter you name"
     }else if(data.name.length < 3){
         errors.name = "Your name should be more than three words"
     }else{
@@ -50,5 +50,3 @@ export const validation = (data) => {
     return errors;
 
 }
-
-
