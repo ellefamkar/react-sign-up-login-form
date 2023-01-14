@@ -1,5 +1,5 @@
 {
-  "name": "signup-form",
+  "name": "signup-login-form",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -317,7 +317,7 @@ const SignUpButton = styled.div`
    cursor: pointer;
    right:  -5px;
    top: 10%;
-   width: 58px;
+   width: 76px;
    height: 58px;
    padding: 0.5rem;
    background: #ff009914;
@@ -335,7 +335,7 @@ const SignUpButton = styled.div`
    &::before{
       content: "";
     color: white;
-    width: 57px;
+    width: 76px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -355,7 +355,7 @@ const SignUpButton = styled.div`
   &::after {
    content: "";
    color: white;
-   width: 54px;
+   width: 74px;
    top: 6px;
    right: 0px;
    display: -webkit-box;

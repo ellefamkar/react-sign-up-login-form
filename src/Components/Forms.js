@@ -5,7 +5,7 @@ import Login from "./Login";
 const Forms = () => {
     return (
         <>
-            {/* <SignUp /> */}
+            <SignUp />
             <Login />
         </>
     );
