@@ -28,6 +28,8 @@ Remember that "Every day is a learning day" and try to learn from everyone!
 
 ![](./public/images/Sign-up-Screenshot.png)
 
+![](./public/images/Sign-up-screenshot-validation.png)
+
 ![](./public/images/Login-Screenshot.png)
 
 ### Links
