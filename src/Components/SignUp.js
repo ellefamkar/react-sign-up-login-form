@@ -8,7 +8,7 @@ import { notify } from "./toast";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  min-height: calc(100vh - 2rem);
+  min-height: 100vh;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -120,7 +120,7 @@ const FormContainer = styled.div`
       animation: animate 5s linear infinite;
       -webkit-background-clip: text;
       -webkit-text-fill-color: rgba(225, 225, 225, 0.5);
-      margin: 1rem auto 1.5rem;
+      margin: 1rem auto 2.5rem;
    }
 
    input[type="checkbox"]{

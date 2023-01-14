@@ -8,7 +8,7 @@ import { notify } from "./toast";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  min-height: calc(100vh - 2rem);
+  min-height: 100vh;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
